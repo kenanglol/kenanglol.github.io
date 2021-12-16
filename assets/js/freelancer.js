@@ -1,12 +1,12 @@
-(function () {
+(function() {
   "use strict"; // Start of use strict
 
   var scrollToTop = document.querySelector('.scroll-to-top');
-
+  
   if (scrollToTop) {
-
+    
     // Scroll to top button appear
-    window.addEventListener('scroll', function () {
+    window.addEventListener('scroll', function() {
       var scrollDistance = window.pageYOffset;
 
       if (scrollDistance > 100) {
@@ -22,15 +22,15 @@
   if (mainNav) {
 
     var navbarCollapse = mainNav.querySelector('.navbar-collapse');
-
+    
     if (navbarCollapse) {
-
+      
       var collapse = new bootstrap.Collapse(navbarCollapse, {
         toggle: false
       });
-
+      
       var navbarItems = navbarCollapse.querySelectorAll('a');
-
+      
       // Closes responsive menu when a scroll trigger link is clicked
       for (var item of navbarItems) {
         item.addEventListener('click', function (event) {
@@ -40,7 +40,7 @@
     }
 
     // Collapse Navbar
-    var collapseNavbar = function () {
+    var collapseNavbar = function() {
 
       var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
 
